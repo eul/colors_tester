@@ -1,1 +1,1 @@
-# Random colors
+Random colors
