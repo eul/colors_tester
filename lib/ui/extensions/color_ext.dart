@@ -1,6 +1,5 @@
 
-import 'dart:math';
-
+import 'package:colors_tester/ui/utils/irandomizer.dart';
 import 'package:flutter/material.dart';
 
 /// Extensions for [Color]
@@ -13,24 +12,16 @@ extension ColorExt on Color {
 
   /// Generates new random [Color]
   ///
-  Color nextRandomColor() {
+  Color nextRandomColor(IRandomizer randomizer) {
 
-    final Random random = Random();
+    //final Random random = Random();
 
     return Color(_hexFromRGB(
-      random.nextInt(maxRGBRange),
-      random.nextInt(maxRGBRange),
-      random.nextInt(maxRGBRange),
+        randomizer.getIntValue(),
+        randomizer.getIntValue(),
+        randomizer.getIntValue(),
       ),
     );
-/*
-    return Color.fromRGBO(
-      random.nextInt(maxRGBRange),
-      random.nextInt(maxRGBRange),
-      random.nextInt(maxRGBRange),
-      1,
-    );
- */
   }
 
   /// returns [Color] which is opposite to the current one

@@ -1,6 +1,7 @@
 
 import 'package:colors_tester/ui/components/colored_container_widget.dart';
 import 'package:colors_tester/ui/extensions/color_ext.dart';
+import 'package:colors_tester/ui/utils/irandomizer.dart';
 import 'package:flutter/material.dart';
 
 /// Widget with text in the center and which is able to change it's background
@@ -22,6 +23,8 @@ class _ColorfulScreenWidgetState extends State<ColorfulScreenWidget> {
   //----------------------------------------------------------------------------
   //region Properties
 
+  /// Utils to generate random int values
+  final IRandomizer _randomizer = PositiveIntRandomizer(ColorExt.maxRGBRange);
   /// The whole widget color
   Color _backgroundColor = Colors.white;
   /// Color of the centered text (it should be always visible regardless
@@ -62,7 +65,7 @@ class _ColorfulScreenWidgetState extends State<ColorfulScreenWidget> {
 
   void _updateColors() {
 
-    final newColor = _backgroundColor.nextRandomColor();
+    final newColor = _backgroundColor.nextRandomColor(_randomizer);
 
     setState(() {
       _backgroundColor = newColor;

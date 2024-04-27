@@ -14,7 +14,7 @@ class PositiveIntRandomizer implements IRandomizer {
   final int maxValue;
 
   /// Storage to save possible values
-  late final List<int> _valuesList;
+  List<int> _valuesList = [];
 
   /// Constructor
   PositiveIntRandomizer(this.maxValue){
