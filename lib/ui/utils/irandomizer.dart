@@ -1,3 +1,4 @@
+
 /// Random numbers generator interface
 ///
 abstract class IRandomizer {
@@ -6,9 +7,9 @@ abstract class IRandomizer {
   int getIntValue();
 }
 
-/// [IRandomizer] implementation for positive int values
+/// [IRandomizer] implementation based on List functionality
 ///
-class PositiveIntRandomizer implements IRandomizer {
+class ListBasedIntRandomizer implements IRandomizer {
 
   /// Max value for generated values
   final int maxValue;
@@ -17,7 +18,7 @@ class PositiveIntRandomizer implements IRandomizer {
   List<int> _valuesList = [];
 
   /// Constructor
-  PositiveIntRandomizer(this.maxValue){
+  ListBasedIntRandomizer(this.maxValue){
     _valuesList = List<int>.generate(maxValue, (index) => index);
   }
 
@@ -27,5 +28,32 @@ class PositiveIntRandomizer implements IRandomizer {
     _valuesList.shuffle();
 
     return _valuesList.first;
+  }
+}
+
+/// [IRandomizer] implementation based on Object hash functionality
+///
+class ObjectHashBasedIntRandomizer implements IRandomizer {
+
+  /// Max value for generated values
+  final int maxValue;
+
+  /// Constructor
+  ObjectHashBasedIntRandomizer(this.maxValue);
+
+  @override
+  int getIntValue() {
+
+    final objectHash = Object().hashCode;
+
+    int threeDigitsValue = int.parse(objectHash.toString()
+        .substring(objectHash.toString().length - 3),
+    );
+
+    while (threeDigitsValue >= maxValue) {
+      threeDigitsValue -= maxValue - 1;
+    }
+
+    return threeDigitsValue;
   }
 }

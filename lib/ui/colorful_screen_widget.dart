@@ -24,7 +24,10 @@ class _ColorfulScreenWidgetState extends State<ColorfulScreenWidget> {
   //region Properties
 
   /// Utils to generate random int values
-  final IRandomizer _randomizer = PositiveIntRandomizer(ColorExt.maxRGBRange);
+  final IRandomizer _randomizer
+                          = ObjectHashBasedIntRandomizer(ColorExt.maxRGBRange);
+                       // = ListBasedIntRandomizer(ColorExt.maxRGBRange);
+
   /// The whole widget color
   Color _backgroundColor = Colors.white;
   /// Color of the centered text (it should be always visible regardless
