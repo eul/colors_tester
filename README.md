@@ -1,4 +1,4 @@
-Random colors
+# Random colors
 
 There are two random numbers generators in the app:
 - ObjectHashBasedIntRandomizer
@@ -6,7 +6,8 @@ There are two random numbers generators in the app:
 
 in the irandomizer.dart file
 
-final IRandomizer _randomizer
+`final IRandomizer _randomizer
     = ObjectHashBasedIntRandomizer(ColorExt.maxRGBRange);
- // = ListBasedIntRandomizer(ColorExt.maxRGBRange);
+ // = ListBasedIntRandomizer(ColorExt.maxRGBRange);`
+
 
