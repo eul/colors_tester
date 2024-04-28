@@ -51,7 +51,7 @@ class ObjectHashBasedIntRandomizer implements IRandomizer {
     );
 
     while (threeDigitsValue >= maxValue) {
-      threeDigitsValue -= maxValue - 1;
+      threeDigitsValue -= maxValue;
     }
 
     return threeDigitsValue;
