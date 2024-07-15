@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-colorsgen-dev-0d71f-authRole",
+      "UnauthRoleArn": "arn:aws:iam::239815168444:role/amplify-colorsgen-dev-0d71f-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::239815168444:role/amplify-colorsgen-dev-0d71f-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-colorsgen-dev-0d71f-deployment",
+      "UnauthRoleName": "amplify-colorsgen-dev-0d71f-unauthRole",
+      "StackName": "amplify-colorsgen-dev-0d71f",
+      "StackId": "arn:aws:cloudformation:us-east-1:239815168444:stack/amplify-colorsgen-dev-0d71f/4645d540-4285-11ef-ba15-0e184773dacb",
+      "AmplifyAppId": "d2durnuwmjee3m"
+    },
+    "categories": {
+      "auth": {
+        "colorsgen762f33e8": {},
+        "userPoolGroups": {}
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
-import 'package:colors_tester/ui/colorful_screen_widget.dart';
+
 import 'package:flutter/material.dart';
+import 'package:amplify_authenticator/amplify_authenticator.dart';
+
+import '../router.dart';
 
 /// App Widget holder
 class AppWidget extends StatelessWidget {
@@ -8,15 +11,19 @@ class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
 
   // This widget is the root of your application.
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return Authenticator(
+      child: MaterialApp.router(
+        routerConfig: router,
+        builder: Authenticator.builder(),
+        theme: ThemeData(
+          colorScheme:
+          ColorScheme.fromSwatch(primarySwatch: Colors.amber)
+              .copyWith(
+            background: const Color(0xff82CFEA),
+          ),
+        ),
       ),
-      home: const ColorfulScreenWidget(),
     );
   }
 }
