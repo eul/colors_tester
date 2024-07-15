@@ -17,5 +17,24 @@
         "userPoolGroups": {}
       }
     }
+  },
+  "qa": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-colorsgen-qa-d7ae9-authRole",
+      "UnauthRoleArn": "arn:aws:iam::239815168444:role/amplify-colorsgen-qa-d7ae9-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::239815168444:role/amplify-colorsgen-qa-d7ae9-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-colorsgen-qa-d7ae9-deployment",
+      "UnauthRoleName": "amplify-colorsgen-qa-d7ae9-unauthRole",
+      "StackName": "amplify-colorsgen-qa-d7ae9",
+      "StackId": "arn:aws:cloudformation:us-east-1:239815168444:stack/amplify-colorsgen-qa-d7ae9/e2c9ecb0-4291-11ef-993b-0affefb4c111",
+      "AmplifyAppId": "d2durnuwmjee3m"
+    },
+    "categories": {
+      "auth": {
+        "colorsgen762f33e8": {},
+        "userPoolGroups": {}
+      }
+    }
   }
 }
